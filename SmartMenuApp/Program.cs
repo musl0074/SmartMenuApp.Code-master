@@ -11,6 +11,7 @@ namespace SmartMenuApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("marcus1");
             Program myProgram = new Program();
             myProgram.Run();
         }
