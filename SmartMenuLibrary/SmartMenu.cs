@@ -9,13 +9,17 @@ namespace SmartMenuLibrary
 {
     public class SmartMenu
     {
-        string[] line;
+        List<String[]> list; 
+        string userInput;
         
 
         public void LoadMenu(string path)
         {
-            line = File.ReadAllLines(path);
-           
+             list = File.ReadLines(path)
+                          .Select(r => r.TrimEnd().Split(','))
+                          .ToList();
+
+
         }
         public void Activate()
         {
@@ -23,7 +27,10 @@ namespace SmartMenuLibrary
             {
                 Console.WriteLine(item);   
             }
-            Console.ReadLine();
+             userInput = Console.ReadLine();
+        
+         
+
 
         }
     }
