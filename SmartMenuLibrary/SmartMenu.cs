@@ -9,29 +9,44 @@ namespace SmartMenuLibrary
 {
     public class SmartMenu
     {
-        List<String[]> list; 
+        int counter = 0;
+        string line;
+        List<String> items = new List<string>();
+        string[] substrings;
         string userInput;
-        
+
+
 
         public void LoadMenu(string path)
         {
-             list = File.ReadLines(path)
-                          .Select(r => r.TrimEnd().Split(','))
-                          .ToList();
+            // Read the file and display it line by line.  
+            System.IO.StreamReader file =
+                new System.IO.StreamReader(@"C:\Users\Muslim Al Ali\Desktop\Datamatiker - 2018\Programmering\Projekt\SmartMenuApp.Code-master\MenuSpec.txt");
+            while ((line = file.ReadLine()) != null)
+            {
+                substrings = line.Split(';');
+                if (substrings.Length > 1)
+                {
+                    items.Add(substrings[1]);
+                }
+
+                System.Console.WriteLine(substrings[0]);
+                counter++;
+
+            }
+
+            file.Close();
+            System.Console.WriteLine("There were {0} lines.", counter);
+            // Suspend the screen.  
+            System.Console.ReadLine();
+
 
 
         }
         public void Activate()
         {
-            foreach(string item in line)
-            {
-                Console.WriteLine(item);   
-            }
-             userInput = Console.ReadLine();
-        
-         
-
-
+            Console.WriteLine(line);
+          
         }
     }
 }
