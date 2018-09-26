@@ -9,9 +9,9 @@ namespace SmartMenuApp
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            Console.WriteLine("marcus2");
             Program myProgram = new Program();
             myProgram.Run();
         }
@@ -19,7 +19,7 @@ namespace SmartMenuApp
         private void Run()
         {
             SmartMenu menu = new SmartMenu();
-            menu.LoadMenu("MenuSpec.txt");
+            menu.LoadMenu(@"C:\Users\Muslim Al Ali\Desktop\Datamatiker - 2018\Programmering\Projekt\SmartMenuApp.Code-master\MenuSpec.txt");
             menu.Activate();
         }
     }
