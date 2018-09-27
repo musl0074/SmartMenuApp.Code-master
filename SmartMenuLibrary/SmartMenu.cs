@@ -32,6 +32,7 @@ namespace SmartMenuLibrary
 
                 System.Console.WriteLine(substrings[0]);
                 counter++;
+                System.Console.WriteLine("Hej rasmus");
 
             }
 
