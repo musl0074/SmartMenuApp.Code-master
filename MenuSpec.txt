@@ -1,6 +1,6 @@
 Min Fantastiske Menu
+(Tryk paa menupunkt eller 0 for at afslutte)
 1. Goer dette;1
 2. Goer hint;2
 3. Goer noget;3
 4. Faa svaret paa livet, universet og alting;4
-(Tryk paa menupunkt eller 0 for at afslutte)
