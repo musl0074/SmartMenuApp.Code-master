@@ -12,7 +12,7 @@ namespace SmartMenuLibrary
         //Vi har en metode som ikke returner noget. Den har en parametre der hedder menuID som den får fra SmartMenu.cs og tjekker hvor vidt hvilke id der blev tastet. 
         public static void Call(string menuID)
         {
-            string something;
+            string something  = "";
             string nothing = "";
 
             if (menuID == "1")
@@ -43,7 +43,7 @@ namespace SmartMenuLibrary
                 Console.WriteLine("The The Answer To Life The Universe And Everything is: ");
                 Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
             }
-            Console.ReadLine();
+            // Console.ReadLine();
         }
 
     }

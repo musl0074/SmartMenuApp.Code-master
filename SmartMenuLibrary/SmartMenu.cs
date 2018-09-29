@@ -43,16 +43,17 @@ namespace SmartMenuLibrary
         public void Activate(){
             int brugervalg = 0;
 
-            while (true) {
-                Console.Clear();
-                Console.WriteLine(titel);
-                foreach (string punkt in menuPunkt){
-                    Console.WriteLine(punkt);
-                }
-                Console.WriteLine(menuValg);
-                string input = Console.ReadLine();
+            Console.WriteLine(titel);
+            foreach (string punkt in menuPunkt){
+                                Console.WriteLine(punkt);
+                            }
+                            Console.WriteLine(menuValg);
 
-                if (input == "0") {
+            while (true) {
+                
+                string input = Console.ReadLine();
+                // Exit hvis input er "0" eller en tom linje
+                if (input == "0" || input == "") {
                     break;
                 }
                 else if (int.TryParse(input, out brugervalg)) {

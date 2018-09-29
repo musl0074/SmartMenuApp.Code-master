@@ -18,8 +18,8 @@ namespace FunctionLibrary
         }
         public static string DoSomething(string something)
         {
-            if (string.IsNullOrEmpty(something))
-                throw new Exception("You need to specify something!");
+            //if (string.IsNullOrEmpty(something))
+                //throw new Exception("You need to specify something!");
 
             return "Result from doing: " + something;
         }
