@@ -19,7 +19,7 @@ namespace SmartMenuApp
         private void Run()
         {
             SmartMenu menu = new SmartMenu();
-            menu.LoadMenu(@"C:\Users\Marcu\Documents\SmartMenuApp.Code-master\MenuSpec.txt.Code-master\MenuSpec.txt");
+            menu.LoadMenu(@"..\..\..\MenuSpec.txt");
             menu.Activate();
         }
     }
