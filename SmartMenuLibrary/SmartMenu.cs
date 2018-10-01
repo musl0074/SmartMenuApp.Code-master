@@ -52,18 +52,18 @@ namespace SmartMenuLibrary
             while (true) {
                 
                 string input = Console.ReadLine();
-                // Exit hvis input er "0" eller en tom linje
+                // Exit hvis input er "0" eller en tom linje0
                 if (input == "0" || input == "") {
                     break;
                 }
                 else if (int.TryParse(input, out brugervalg)) {
                     brugervalg--;
-                    if (brugervalg < menuID.Length) {
+                    if (brugervalg < menuID.Length && brugervalg > 0) {
                         Bindings.Call(menuID[brugervalg]);
                     }
                 }
                 else {
-                    Console.WriteLine("Ummm, excuse me waddafak");
+                    Console.WriteLine("Ugyldigt Input");
                 }
             }
         }
