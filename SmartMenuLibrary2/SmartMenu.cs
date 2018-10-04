@@ -8,8 +8,8 @@ namespace SmartMenuLibrary2
 {
     public class SmartMenu
     {
-        string titel, menuValg;
-        string[] menuPunkt, menuID;
+        private string titel, menuValg;
+        private string[] menuPunkt, menuID;
 
         public void LoadMenu(string path)
         {
@@ -75,6 +75,27 @@ namespace SmartMenuLibrary2
                 }
             }
         }
+
+        public string Title()
+        {
+            return titel;
+        }
+
+        public string MenuValg()
+        {
+            return menuValg;
+        }
+
+        public string MenuPunkt()
+        {
+            return menuPunkt[0];
+        }
+
+        public string MenuId()
+        {
+            return menuID[0];
+        }
+
     }
 }
 
